@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="imio.reportproblem"
+>
+
+  <records interface="imio.reportproblem.interfaces.IReportProblemSettings">
+
+    <!-- Kept in sync with constants.DEFAULT_REASONS. Defaults *are* shipped
+         here, unlike the wording records: an empty vocabulary would make the
+         form unusable. Each label is translated on display when the package
+         ships a matching msgid. -->
+    <value key="reasons"
+           purge="true"
+    >
+      <element>Content error</element>
+      <element>Personal data</element>
+      <element>Missing or unreadable annex</element>
+      <element>Other</element>
+    </value>
+
+    <value key="subject_template">[Problem report] ${title}</value>
+
+    <value key="form_display_mode">modal</value>
+
+    <!-- button_label, form_title, form_intro and confirmation_message are
+         deliberately NOT shipped. As long as they stay empty the add-on uses
+         its own labels from the i18n catalog, hence translated. Shipping a
+         value here would freeze the wording in a single language for every
+         site, including the sites that never opened the control panel. -->
+
+  </records>
+
+</registry>

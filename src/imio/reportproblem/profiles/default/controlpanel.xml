@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        purge="False"
+        i18n:domain="imio.reportproblem"
+>
+
+  <configlet action_id="imio.reportproblem.settings"
+             appId="imio.reportproblem"
+             category="plone-content"
+             condition_expr=""
+             icon_expr="string:exclamation-triangle"
+             title="Report a problem"
+             url_expr="string:${portal_url}/@@reportproblem-controlpanel"
+             visible="True"
+             i18n:attributes="title"
+  >
+    <permission>Manage portal</permission>
+  </configlet>
+
+</object>

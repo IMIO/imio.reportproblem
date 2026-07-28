@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <!-- Marker only behavior: a report is transient, there is nothing to store
+       on the content itself, hence no schema. The marker is resolved
+       dynamically by FTIAwareSpecification, so enabling it on a type needs no
+       migration of the existing content.
+
+       The name is explicit and part of the public API: another package
+       references it from its own FTI XML. -->
+  <plone:behavior
+      name="imio.reportproblem.reportable"
+      title="Report a problem"
+      description="Adds a report button on this content type"
+      provides=".interfaces.IProblemReportable"
+      />
+
+</configure>

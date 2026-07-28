@@ -1,0 +1,1 @@
+DELIBE-327: Document the installation and its extras, the control panel, and the two extension points (`IProblemReportConfig`, `IProblemReportedEvent`), and state explicitly that 1.0 is Classic UI only.

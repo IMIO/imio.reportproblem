@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <!-- One single view for both display modes. The modal loads it over AJAX and
+       extracts "#report-problem-form"; the standalone page renders the same
+       markup with the back link. Only the button's link differs, never this
+       registration.
+
+       "zope2.View" and no dedicated permission: whoever can see the content
+       can report a problem about it, unpublished content included. No leak
+       follows from that, since a visitor who cannot see the content cannot see
+       this form either. -->
+  <browser:page
+      name="report-problem"
+      for="..interfaces.IProblemReportable"
+      class=".form.ReportProblemForm"
+      permission="zope2.View"
+      layer="..interfaces.IBrowserLayer"
+      />
+
+</configure>

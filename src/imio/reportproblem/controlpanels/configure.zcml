@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <browser:page
+      name="reportproblem-controlpanel"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      class=".settings.ReportProblemSettingsControlPanel"
+      permission="cmf.ManagePortal"
+      layer="imio.reportproblem.interfaces.IBrowserLayer"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

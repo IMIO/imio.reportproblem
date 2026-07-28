@@ -1,0 +1,1 @@
+DELIBE-324: Create the package, its GitHub Actions CI and the `imio` native namespace. Declare the `captcha`, `audit` and `all` extras, and ship a minimal GenericSetup profile that installs and uninstalls cleanly. CI covers the four installation configurations (no extra, `captcha`, `audit`, `all`).

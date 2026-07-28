@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Report Problem: Install"
+      description="Package to configure a new Report Problem site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Report Problem: Uninstall"
+      description="Uninstall Report Problem setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="imio.reportproblem"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>

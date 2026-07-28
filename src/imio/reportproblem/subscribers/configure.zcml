@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <!-- Audit logging is opt-in through the ``audit`` extra: installing
+       collective.fingerpointing is what turns it on. -->
+  <include
+      file="fingerpointing.zcml"
+      zcml:condition="installed collective.fingerpointing"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

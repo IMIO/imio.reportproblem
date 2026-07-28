@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="portal_controlpanel"
+        purge="False"
+>
+
+  <!-- Without this, uninstalling leaves a configlet in Site Setup pointing at
+       a view that is no longer registered. -->
+  <configlet action_id="imio.reportproblem.settings"
+             remove="True"
+  />
+
+</object>

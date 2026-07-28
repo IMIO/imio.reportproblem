@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <!-- Only loaded when collective.fingerpointing is installed, see
+       configure.zcml.  The handler logs metadata only: no personal data
+       about the reporter reaches the audit log. -->
+  <subscriber
+      for="imio.reportproblem.interfaces.IProblemReportedEvent"
+      handler=".audit.log_problem_reported"
+      />
+
+</configure>

@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="imio.reportproblem"
+    >
+
+  <!-- Default problem report configuration, registered on "*" so that a
+       consumer package registering on a more specific interface wins the
+       lookup without any overrides.zcml. The for/provides pair comes from the
+       @adapter/@implementer declarations on the class itself. -->
+  <adapter factory=".adapters.ProblemReportConfig" />
+
+</configure>

@@ -1,0 +1,12 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Name kept in sync with constants.REASONS_VOCABULARY. -->
+  <utility
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="imio.reportproblem.reasons"
+      component=".reasons.ReasonsVocabularyFactory"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

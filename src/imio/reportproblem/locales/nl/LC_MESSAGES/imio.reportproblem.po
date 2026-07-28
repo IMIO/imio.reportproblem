@@ -1,0 +1,292 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: imio.reportproblem\n"
+"POT-Creation-Date: 2026-07-28 13:45+0000\n"
+"PO-Revision-Date: 2026-07-28 00:00+0000\n"
+"Last-Translator: Antoine Duchêne <antoine.duchene@imio.be>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: imio.reportproblem\n"
+
+#: imio/reportproblem/behaviors.zcml:19
+msgid "Adds a report button on this content type"
+msgstr "Voegt een meldknop toe aan dit inhoudstype"
+
+#: imio/reportproblem/interfaces.py:101
+msgid "Button label"
+msgstr "Label van de knop"
+
+#: imio/reportproblem/interfaces.py:126
+msgid "Confirmation message"
+msgstr "Bevestigingsbericht"
+
+#: imio/reportproblem/constants.py:30
+msgid "Content error"
+msgstr "Inhoudelijke fout"
+
+#: imio/reportproblem/interfaces.py:65
+msgid "Default email addresses receiving the reports. An adapter registered by another package may override them."
+msgstr "E-mailadressen die de meldingen standaard ontvangen. Een adapter uit een ander pakket kan ze vervangen."
+
+#: imio/reportproblem/interfaces.py:69
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: imio/reportproblem/interfaces.py:133
+msgid "Form display mode"
+msgstr "Weergavemodus van het formulier"
+
+#: imio/reportproblem/interfaces.py:119
+msgid "Form introduction"
+msgstr "Inleiding van het formulier"
+
+#: imio/reportproblem/interfaces.py:112
+msgid "Form title"
+msgstr "Titel van het formulier"
+
+#: imio/reportproblem/interfaces.py:102
+msgid "Leave empty to use the add-on's own translated label. A value typed here is used as is, in the language it was typed in. It is used both as the button text and as its aria-label."
+msgstr "Laat leeg om het vertaalde label van de add-on te gebruiken. Een hier ingevulde waarde wordt ongewijzigd gebruikt, in de taal waarin ze is ingevuld. Ze dient zowel als tekst van de knop als als aria-label."
+
+#: imio/reportproblem/interfaces.py:127
+msgid "Leave empty to use the add-on's own translated message."
+msgstr "Laat leeg om het vertaalde bericht van de add-on te gebruiken."
+
+#: imio/reportproblem/interfaces.py:120
+msgid "Leave empty to use the add-on's own translated text."
+msgstr "Laat leeg om de vertaalde tekst van de add-on te gebruiken."
+
+#: imio/reportproblem/interfaces.py:113
+msgid "Leave empty to use the add-on's own translated title."
+msgstr "Laat leeg om de vertaalde titel van de add-on te gebruiken."
+
+#: imio/reportproblem/constants.py:32
+msgid "Missing or unreadable annex"
+msgstr "Ontbrekende of onleesbare bijlage"
+
+#: imio/reportproblem/constants.py:33
+msgid "Other"
+msgstr "Andere"
+
+#: imio/reportproblem/profiles.zcml:13
+msgid "Package to configure a new Report Problem site"
+msgstr "Pakket voor de configuratie van probleemmeldingen"
+
+#: imio/reportproblem/constants.py:31
+msgid "Personal data"
+msgstr "Persoonsgegevens"
+
+#: imio/reportproblem/interfaces.py:88
+msgid "Privacy policy URL"
+msgstr "URL van het privacybeleid"
+
+#: imio/reportproblem/interfaces.py:82
+msgid "Reason"
+msgstr "Reden"
+
+#: imio/reportproblem/interfaces.py:76
+msgid "Reasons"
+msgstr "Redenen"
+
+#: imio/reportproblem/interfaces.py:77
+msgid "Reasons offered in the form. A reason is translated when the package ships a translation for it, and shown as typed otherwise."
+msgstr "Redenen die het formulier aanbiedt. Een reden wordt vertaald als het pakket een vertaling levert, en anders ongewijzigd weergegeven."
+
+#: imio/reportproblem/interfaces.py:64
+msgid "Recipients"
+msgstr "Ontvangers"
+
+#: imio/reportproblem/profiles.zcml:13
+msgid "Report Problem: Install"
+msgstr "Probleemmelding: installatie"
+
+#: imio/reportproblem/profiles.zcml:21
+msgid "Report Problem: Uninstall"
+msgstr "Probleemmelding: verwijderen"
+
+#: imio/reportproblem/behaviors.zcml:19
+#: imio/reportproblem/profiles/default/controlpanel.xml
+msgid "Report a problem"
+msgstr "Een probleem melden"
+
+#: imio/reportproblem/interfaces.py:94
+msgid "Subject template"
+msgstr "Sjabloon voor het onderwerp"
+
+#: imio/reportproblem/interfaces.py:95
+msgid "Template of the email subject. ${title} is substituted."
+msgstr "Sjabloon voor het onderwerp van de e-mail. ${title} wordt vervangen."
+
+#: imio/reportproblem/profiles.zcml:21
+msgid "Uninstall Report Problem setup."
+msgstr "Verwijdert de configuratie voor probleemmeldingen."
+
+#: imio/reportproblem/interfaces.py:134
+msgid "Whether the form opens in a modal window or as a full page. Fall back to the page mode if the captcha misbehaves in the modal."
+msgstr "Bepaalt of het formulier in een modaal venster of als volledige pagina opent. Val terug op de paginamodus als de captcha zich in het modale venster misdraagt."
+
+#. Default: "Site wide settings of the problem report form. Leave a wording field empty to keep the add-on's own translated label."
+#: imio/reportproblem/controlpanels/settings.py:28
+msgid "controlpanel_report_problem_description"
+msgstr "Instellingen van het probleemmeldingsformulier, geldig voor de hele site. Laat een labelveld leeg om het vertaalde label van de add-on te behouden."
+
+#. Default: "Report a problem"
+#: imio/reportproblem/controlpanels/settings.py:27
+msgid "controlpanel_report_problem_title"
+msgstr "Een probleem melden"
+
+#. Default: "Back to the content"
+#: imio/reportproblem/browser/templates/report_problem_form.pt:127
+msgid "report_problem_back"
+msgstr "Terug naar de inhoud"
+
+#. Default: "Content"
+#: imio/reportproblem/report.py:44
+msgid "report_problem_body_content"
+msgstr "Inhoud"
+
+#. Default: "A problem has been reported on the following content."
+#: imio/reportproblem/report.py:39
+msgid "report_problem_body_intro"
+msgstr "Er is een probleem gemeld over de volgende inhoud."
+
+#. Default: "Email address"
+#: imio/reportproblem/report.py:65
+msgid "report_problem_body_label_email"
+msgstr "E-mailadres"
+
+#. Default: "Message"
+#: imio/reportproblem/report.py:69
+msgid "report_problem_body_label_message"
+msgstr "Bericht"
+
+#. Default: "Name"
+#: imio/reportproblem/report.py:63
+msgid "report_problem_body_label_name"
+msgstr "Naam"
+
+#. Default: "Reason"
+#: imio/reportproblem/report.py:61
+msgid "report_problem_body_label_reason"
+msgstr "Reden"
+
+#. Default: "Publication state"
+#: imio/reportproblem/report.py:56
+msgid "report_problem_body_label_review_state"
+msgstr "Publicatiestatus"
+
+#. Default: "Title"
+#: imio/reportproblem/report.py:48
+msgid "report_problem_body_label_title"
+msgstr "Titel"
+
+#. Default: "Content type"
+#: imio/reportproblem/report.py:54
+msgid "report_problem_body_label_type"
+msgstr "Inhoudstype"
+
+#. Default: "UID"
+#: imio/reportproblem/report.py:52
+msgid "report_problem_body_label_uid"
+msgstr "UID"
+
+#. Default: "URL"
+#: imio/reportproblem/report.py:50
+msgid "report_problem_body_label_url"
+msgstr "URL"
+
+#. Default: "User id"
+#: imio/reportproblem/report.py:67
+msgid "report_problem_body_label_userid"
+msgstr "Gebruikersnaam"
+
+#. Default: "Report"
+#: imio/reportproblem/report.py:46
+msgid "report_problem_body_reporter"
+msgstr "Melding"
+
+#. Default: "Report a problem"
+#: imio/reportproblem/constants.py:46
+msgid "report_problem_button"
+msgstr "Een probleem melden"
+
+#. Default: "Verification"
+#: imio/reportproblem/captcha.py:73
+msgid "report_problem_captcha"
+msgstr "Verificatie"
+
+#. Default: "The captcha validation was unsuccessful. Please retry by carefully following the instructions."
+#: imio/reportproblem/browser/form.py:56
+msgid "report_problem_captcha_error"
+msgstr "De captchacontrole is mislukt. Probeer het opnieuw en volg de instructies zorgvuldig."
+
+#. Default: "Thank you, your report has been sent."
+#: imio/reportproblem/constants.py:56
+msgid "report_problem_confirmation"
+msgstr "Bedankt, uw melding is verzonden."
+
+#. Default: "Your email address"
+#: imio/reportproblem/browser/form.py:87
+msgid "report_problem_field_email"
+msgstr "Uw e-mailadres"
+
+#. Default: "So that we can get back to you about your report."
+#: imio/reportproblem/browser/form.py:88
+msgid "report_problem_field_email_help"
+msgstr "Zodat wij u over uw melding kunnen contacteren."
+
+#. Default: "Message"
+#: imio/reportproblem/browser/form.py:103
+msgid "report_problem_field_message"
+msgstr "Bericht"
+
+#. Default: "Describe the problem as precisely as you can."
+#: imio/reportproblem/browser/form.py:104
+msgid "report_problem_field_message_help"
+msgstr "Beschrijf het probleem zo nauwkeurig mogelijk."
+
+#. Default: "Your name"
+#: imio/reportproblem/browser/form.py:82
+msgid "report_problem_field_name"
+msgstr "Uw naam"
+
+#. Default: "Reason"
+#: imio/reportproblem/browser/form.py:97
+msgid "report_problem_field_reason"
+msgstr "Reden"
+
+#. Default: "Spotted an error on this content? Tell us about it and we will look into it."
+#: imio/reportproblem/constants.py:50
+msgid "report_problem_form_intro"
+msgstr "Hebt u een fout op deze inhoud gezien? Meld het ons en wij bekijken het."
+
+#. Default: "Report a problem"
+#: imio/reportproblem/constants.py:48
+msgid "report_problem_form_title"
+msgstr "Een probleem melden"
+
+#. Default: "Send the report"
+#: imio/reportproblem/browser/form.py:54
+msgid "report_problem_send_button"
+msgstr "Melding verzenden"
+
+#. Default: "Your report could not be sent. Please try again later."
+#: imio/reportproblem/browser/form.py:62
+msgid "report_problem_send_error"
+msgstr "Uw melding kon niet worden verzonden. Probeer het later opnieuw."
+
+#. Default: "[Problem report] ${title}"
+#: imio/reportproblem/constants.py:61
+msgid "report_problem_subject"
+msgstr "[Probleemmelding] ${title}"
+
+#. Default: "Reporting a problem is not available on this content."
+#: imio/reportproblem/browser/form.py:67
+msgid "report_problem_unavailable"
+msgstr "Een probleem melden is niet beschikbaar voor deze inhoud."
