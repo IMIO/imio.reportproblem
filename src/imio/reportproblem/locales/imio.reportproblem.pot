@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-28 13:45+0000\n"
+"POT-Creation-Date: 2026-07-28 14:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,7 +145,7 @@ msgid "controlpanel_report_problem_title"
 msgstr ""
 
 #. Default: "Back to the content"
-#: imio/reportproblem/browser/templates/report_problem_form.pt:127
+#: imio/reportproblem/browser/templates/report_problem_form.pt:123
 msgid "report_problem_back"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: imio.reportproblem\n"
-"POT-Creation-Date: 2026-07-28 13:45+0000\n"
+"POT-Creation-Date: 2026-07-28 14:52+0000\n"
 "PO-Revision-Date: 2026-07-28 00:00+0000\n"
 "Last-Translator: Antoine Duchêne <antoine.duchene@imio.be>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -142,7 +142,7 @@ msgid "controlpanel_report_problem_title"
 msgstr "Signaler un problème"
 
 #. Default: "Back to the content"
-#: imio/reportproblem/browser/templates/report_problem_form.pt:127
+#: imio/reportproblem/browser/templates/report_problem_form.pt:123
 msgid "report_problem_back"
 msgstr "Retour au contenu"
 

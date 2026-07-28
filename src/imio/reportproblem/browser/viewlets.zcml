@@ -4,6 +4,25 @@
     i18n_domain="imio.reportproblem"
     >
 
-  <!-- -*- extra stuff goes here -*- -->
+  <!-- The button that opens the "@@report-problem" form, on any content
+       carrying the marker behavior. Registered in "plone.belowcontentbody" and
+       nowhere else, so a content type opts in through the behavior only.
+
+       No template attribute here: the class carries its own
+       ViewPageTemplateFile, living in "templates/" so that z3c.jbot can
+       override it.
+
+       "zope2.View", as for the form itself: whoever can see the content may
+       report a problem about it. Whether the button actually shows is another
+       question entirely, and one single condition answers it:
+       "report.is_report_available", checked in the viewlet's "render". -->
+  <browser:viewlet
+      name="report-problem-button"
+      for="..interfaces.IProblemReportable"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".viewlets.ReportProblemButtonViewlet"
+      permission="zope2.View"
+      layer="..interfaces.IBrowserLayer"
+      />
 
 </configure>

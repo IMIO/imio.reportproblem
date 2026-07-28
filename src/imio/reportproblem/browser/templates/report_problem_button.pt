@@ -1,0 +1,43 @@
+<div xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     class="report-problem-viewlet"
+     i18n:domain="imio.reportproblem"
+>
+
+  <!-- Minimal on purpose, so that a site can override it through z3c.jbot.
+
+     No <i> icon element here: plonetheme.deliberations injects its own icon
+     through a CSS "::before" rule on ".report-problem-link", guarded by
+     ":has(i)" so that it stands down for markup shipping an icon of its own.
+     A generic add-on must not hard-code another package's icon font.
+
+     Whether this renders at all is decided in Python, in the viewlet's
+     "render": an override of this template cannot open what the guard rails
+     close.
+
+     "class" carries "pat-plone-modal" in modal mode and not in page mode, and
+     that is the whole of the difference between the two modes, the href being
+     the same either way. A "pat-plone-modal" link whose pattern does not
+     initialise stays an ordinary link, so page mode is also the no-JavaScript
+     fallback.
+
+     "data-pat-plone-modal" is emitted in modal mode only, and its
+     "actionOptions.redirectOnResponse" is load bearing: the form redirects to
+     the content with a status message on success, and mockup's defaults would
+     follow that redirect over AJAX and redraw the modal from the content page,
+     where "#report-problem-form" no longer exists, leaving an empty modal and
+     a confirmation nobody ever sees. Do not "simplify" it away.
+
+     The label is translated in the viewlet rather than here, because the same
+     string is also the aria-label: the accessible name never drifts from what
+     is displayed. -->
+  <a class="report-problem-link"
+     tal:attributes="
+       class view/link_class;
+       href view/link_url;
+       aria-label view/label;
+       data-pat-plone-modal view/modal_options;
+     "
+  ><span tal:content="view/label">Report a problem</span></a>
+
+</div>
