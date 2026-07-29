@@ -1,0 +1,19 @@
+graft src/imio
+graft news
+graft tests
+include *.md
+include *.toml
+include *.cfg
+include *.yaml
+include LICENSE.GPL
+exclude .flake8
+exclude .editorconfig
+exclude instance.yaml
+exclude mx.ini
+exclude Makefile
+exclude bobtemplate.cfg
+exclude *-mxdev.txt
+recursive-exclude .github *
+recursive-exclude .vscode *
+global-exclude *.pyc
+global-exclude .DS_Store

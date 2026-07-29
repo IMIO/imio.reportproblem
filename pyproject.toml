@@ -72,23 +72,40 @@ target = "plone"
 [tool.uv]
 managed = false
 
-[tool.hatch.version]
-path = "src/imio/reportproblem/__init__.py"
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+# setuptools rather than the hatchling the cookieplone template ships:
+# zc.buildout's ``develop`` runs ``setup.py`` directly, so a PEP 517 only
+# package cannot be a develop egg in the iMio buildouts. The metadata still
+# lives here, in PEP 621 form, and setup.py is a bare shim.
+requires = ["setuptools>=68.2"]
+build-backend = "setuptools.build_meta"
 
-[tool.hatch.build]
-strict-naming = true
+[tool.setuptools.dynamic]
+# Single source of truth, and the file [tool.zest-releaser] already bumps.
+version = {attr = "imio.reportproblem.__version__"}
 
-[tool.hatch.build.targets.sdist]
-exclude = [
-  "/.github",
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+# PEP 420: the ``imio`` namespace has no __init__.py on purpose.
+namespaces = true
+
+[tool.setuptools.package-data]
+# ZCML, GenericSetup XML, page templates and the compiled catalogs all have to
+# ship, or the add-on installs into a site and does nothing.
+"*" = [
+    "*.zcml",
+    "*.xml",
+    "*.pt",
+    "*.pot",
+    "*.po",
+    "*.mo",
+    "*.txt",
+    "*.css",
+    "*.js",
 ]
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/imio"]
 
 [tool.towncrier]
 directory = "news/"
