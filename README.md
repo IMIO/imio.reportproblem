@@ -174,10 +174,10 @@ subclass it and call `super()` to keep it:
 from imio.reportproblem.adapters import ProblemReportConfig
 from imio.reportproblem.interfaces import IProblemReportConfig
 
+
 @implementer(IProblemReportConfig)
 @adapter(IMyContent)
 class MyReportConfig(ProblemReportConfig):
-
     def get_recipients(self):
         email = self._institution_email()
         return [email] if email else super().get_recipients()
@@ -201,6 +201,7 @@ Resolve it through the single entry point, never by adapting by hand:
 
 ```python
 from imio.reportproblem.utils import get_report_config
+
 config = get_report_config(context)
 ```
 
@@ -212,7 +213,7 @@ build statistics, or store the report:
 ```python
 @adapter(IProblemReportedEvent)
 def my_handler(event):
-    event.object          # the content the report is about
+    event.object  # the content the report is about
     event.data["reason"]  # the reason *token*, not its translated title
 ```
 

@@ -4,6 +4,8 @@ from imio.reportproblem.constants import DEFAULT_REASONS
 from imio.reportproblem.constants import REASONS_VOCABULARY
 from imio.reportproblem.settings import RECORD_PREFIX
 from plone import api
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
 from zope.component import getUtility
 from zope.i18n import translate
 from zope.i18nmessageid import Message
@@ -88,8 +90,13 @@ class TestReasonsVocabulary:
         assert [term.token for term in vocabulary] == ["broken-link", "typo"]
         assert [term.title for term in vocabulary] == ["Broken link", "Typo"]
 
-    @pytest.mark.portal(roles=["Manager"])
     def test_accepts_a_context_argument(self, portal, factory):
+        # setRoles rather than @pytest.mark.portal(roles=...): the marker is a
+        # no-op on the pytest-plone 1.0.0a2 that the Plone 6.1 constraints
+        # resolve, so the content creation below raised Unauthorized there
+        # while passing on 6.2. These primitives behave the same on every
+        # supported version.
+        setRoles(portal, TEST_USER_ID, ["Manager"])
         document = api.content.create(
             container=portal, type="Document", id="doc", title="Doc"
         )

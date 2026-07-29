@@ -4,7 +4,10 @@ dynamic = ["version"]
 description = "Report a problem on Plone content: adds a report button that emails the report to configured recipients"
 readme = "README.md"
 license = "GPL-2.0-only"
-requires-python = ">=3.10"
+# Upper bound on purpose: the classifiers, the CI matrix and Plone itself stop
+# at 3.13, and an open ">=3.10" claims 3.14 support that is neither tested nor
+# real (check-python-versions flags exactly that).
+requires-python = ">=3.10,<3.14"
 authors = [
     { name = "Antoine Duchêne", email = "antoine.duchene@imio.be" },
 ]

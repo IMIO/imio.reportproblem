@@ -8,6 +8,8 @@ from imio.reportproblem.interfaces import IReportProblemSettings
 from imio.reportproblem.interfaces import is_email
 from imio.reportproblem.settings import RECORD_PREFIX
 from plone import api
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
 from plone.registry.interfaces import IRegistry
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -96,10 +98,13 @@ class TestConfiglet:
         assert CONFIGLET_ID in controlpanel_actions
 
 
-@pytest.mark.portal(roles=["Manager"])
 class TestControlPanelView:
     @pytest.fixture
     def view(self, portal, http_request):
+        # setRoles rather than @pytest.mark.portal(roles=...): that marker is a
+        # no-op on the pytest-plone 1.0.0a2 the Plone 6.1 constraints resolve,
+        # so these tests were silently running without the Manager role there.
+        setRoles(portal, TEST_USER_ID, ["Manager"])
         alsoProvides(http_request, IBrowserLayer)
         return getMultiAdapter((portal, http_request), name=VIEW_NAME)
 
