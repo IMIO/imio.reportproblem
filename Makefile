@@ -83,6 +83,9 @@ install: $(VENV_FOLDER) config ## Install Plone and dependencies
 clean: ## Clean installation and instance (data left intact)
 	@echo "$(RED)==> Cleaning environment and build$(RESET)"
 	@rm -rf $(VENV_FOLDER) pyvenv.cfg .installed.cfg instance/etc .venv .pytest_cache .ruff_cache constraints* requirements*
+	# setuptools artefacts: a stale build/ silently keeps shipping files that
+	# have since been deleted from the source tree.
+	@rm -rf build dist src/*.egg-info
 
 .PHONY: remove-data
 remove-data: ## Remove all content
